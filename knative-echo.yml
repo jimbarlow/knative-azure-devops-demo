@@ -11,4 +11,4 @@ spec:
         - image: index.docker.io/tcij1013/echo@sha256:6af479c983ae3257be9e8569dad5ffccc2f039f65e1c22c814c17ac4482657e7
           env:
             - name: MSG
-              value: OCP KNATIVE DEMO  
+              value: Hello Darden Crew

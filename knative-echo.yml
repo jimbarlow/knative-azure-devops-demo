@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: echo-v2
+  namespace: serverless-demo2
+spec:
+  template:
+    spec:
+      containerConcurrency: 1
+      containers:
+        - image: index.docker.io/tcij1013/echo@sha256:6af479c983ae3257be9e8569dad5ffccc2f039f65e1c22c814c17ac4482657e7
+          env:
+            - name: MSG
+              value: OCP KNATIVE DEMO  
+            - name: PORT
+              value: "8080"
+            - name: K_REVISION
+              value: echo-v2
+            - name: K_CONFIGURATION
+              value: echo
+            - name: K_SERVICE
+              value: echo

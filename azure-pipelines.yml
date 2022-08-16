@@ -31,7 +31,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'cluster2-devops-serverless'
-    cmd: 'apply -f knative-echo.yml'
+    cmd: 'apply -f /home/vsts/work/1/s/knative-echo.yml'
 - task: oc-setup@2
   inputs:
     connectionType: 'OpenShift Connection Service'
